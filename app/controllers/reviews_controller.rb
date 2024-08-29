@@ -3,17 +3,19 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
-  def show
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    # @review = Review.new
-    @review = Review.find(review_params)
-  end
+  # def show
+  #   @restaurant = Restaurant.find(params[:restaurant_id])
+  #   # @review = Review.new
+  #   # @reviews = Review.find(review_params)
+  #   @reviews = @restaurant.reviews
 
-  def new
-    # @restaurant = Restaurant.find(params[:id])
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    @review = Review.new
-  end
+  # end
+
+  # def new
+  #   # @restaurant = Restaurant.find(params[:id])
+  #   @restaurant = Restaurant.find(params[:restaurant_id])
+  #   @review = Review.new
+  # end
 
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
